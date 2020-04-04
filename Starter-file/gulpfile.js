@@ -17,7 +17,7 @@ var replace = require('gulp-replace');
 const files = { 
     scssPath: 'app/scss/**/*.scss',
     jsPath: 'app/js/**/*.js',
-    imgPath: 'app/img/*'
+    imgPath: 'app/img/**/*'
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -36,15 +36,14 @@ function jsTask(){
     return src(files.jsPath)
         .pipe(concat('all.js'))
         .pipe(uglify())
-        .pipe(dest('src/js')
-    );
+        .pipe(dest('src/js'));
 }
 
-// Img task: 
+// Img task
 function imgTask(){
     return src(files.imgPath)
-    .pipe(imagemin('img'))
-    .pipe(dest('src'))
+    .pipe(imagemin())
+    .pipe(dest('src/minifield/images'))
 }
 
 // Cachebust
@@ -52,7 +51,7 @@ function cacheBustTask(){
     var cbString = new Date().getTime();
     return src(['src/*.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('src/img'));
+        .pipe(dest('src'));
 }
 
 // Watch task: watch SCSS and JS files for changes
