@@ -1,0 +1,9 @@
+
+@import 'utils/variables', 'utils/mixins', 'utils/functions', 'utils/placeholders';
+@import 'base/base';
+@import 'components/navbar';
+@import 'layouts/info' ;
+@import 'pages/head';
+@import 'layouts/symptomes', 'layouts/recommandations', 'layouts/test', 'layouts/footer';
+
+.wrapper { overflow: hidden; }

@@ -1,0 +1,73 @@
+.header_nav {
+    background: url(../minifield/images/bg.png) no-repeat center/cover;
+    width: 100%;
+    background-color:#d4f0ff ;
+    padding: 5px 1em;
+    @extend %navflex ;
+
+    .logo { 
+        
+        cursor: pointer; 
+        margin-right: auto;
+        @include media('small-width'){
+            width: 40px;
+        };
+        @include media('v-large-width'){
+          display: none;
+        };
+    }
+    .logo-2 { 
+        cursor: pointer; 
+        margin-right: auto;
+        @include media('help'){
+            display: none;
+        };
+        @include media('v-large-width'){
+            visibility: visible;
+        }
+     }
+
+
+
+    li {
+        display: inline-block;
+        padding: 0 5px;
+        @include media('v-large-width'){
+            padding: 0 2em;
+        }
+
+        a { transition: 
+            all 500ms ease-out;
+            color: color(pre);
+            font-size: 14px;
+            font-weight: 700;
+            @include media('small-width'){
+                font-size: 12px;
+            }
+            @include media('v-large-width'){
+                font-size: 20px;
+            }
+        }
+        .conseil {
+            color: black;
+        }
+
+        .accueil {
+            font-family: 'Animosa' sans-serif !important;
+        }
+    } 
+    .langue {
+        width: 30px;
+        height: 30px;
+        margin: 0 25px;
+        margin-top: 10px;
+        @include media('small-width'){
+            margin: 10px 0 0 1em;
+        }
+        @include media('v-large-width'){
+            width: 40px;
+            height: 40px;
+            margin: 10px 2em 0 2em;
+        }
+    }
+}

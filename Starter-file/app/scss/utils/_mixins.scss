@@ -1,0 +1,74 @@
+/*****  Media Queries  *****/ 
+
+@mixin media($breakpoint)  {
+    @if $breakpoint == 'help' {
+        @media (min-width: $break-s) and (max-width:$break-vl) {
+            @content;
+        }
+    }
+    @if $breakpoint == 'small-width' {
+        @media (min-width: $break-s) and (max-width:$break-m) {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'medium-width' {
+        @media (min-width: $break-m + 1) and (max-width: $break-l) {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'large-width' {
+        @media (min-width: $break-l + 1) and (max-width: $break-vl) {
+            @content;
+        }
+    }  
+    @else if $breakpoint == 'v-large-width' {
+        @media (min-width: $break-vl + 1) and (max-width: $break-xl) {
+            @content;
+        }
+    }  
+    @else if $breakpoint == 'Reco' {
+        @media (min-width: $break-l) and (max-width: $break-flex) {
+            @content;
+        }
+    } 
+    @else if $breakpoint == 'flex' {
+        @media (min-width: $break-flex) and (max-width: $break-xl) {
+            @content;
+        }
+    } 
+}
+
+
+/**** Flex *****/
+
+@mixin flex(
+    $disp : flex,
+     $dir : null,
+      $wrap : null,
+       $content : null,
+        $align : null) {
+            display: flex;
+             flex-direction: $dir;
+              flex-wrap: $wrap;
+               justify-content: $content;
+                align-items: $align;
+                       }
+
+/**** button ******/
+
+@mixin button (
+            $w,
+             $pad,
+              $color,
+               $bg-color,
+                $border,
+                 $f-size,
+                  $f-weight) {
+                        width: $w;
+                         padding: $pad;
+                          color: $color;
+                           background-color: $bg-color;
+                            border-radius: $border;
+                             font-size: $f-size;
+                              font-weight: $f-weight;
+                            }
