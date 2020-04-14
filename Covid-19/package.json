@@ -1,0 +1,41 @@
+{
+  "name": "covid-19-website",
+  "version": "1.0.0",
+  "description": "Un site Web qui contient des informations sur la détection du virus covid-19 à traversdes questions spécifiquedu ministèrede la Santé et quelques consuilspour le prévenir et nous protéger",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barron-KH/Front-end-project.git"
+  },
+  "keywords": [
+    "gulp",
+    "covid-19",
+    "html",
+    "css",
+    "scss",
+    "javascript"
+  ],
+  "author": "@Barron-KH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barron-KH/Front-end-project/issues"
+  },
+  "homepage": "https://github.com/barron-KH/Front-end-project#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
+  }
+}

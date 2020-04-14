@@ -1,0 +1,176 @@
+footer {
+    margin: 1em 0 0 0;
+    .logo {
+        text-align: center;
+        .logo-1 { 
+        
+            cursor: pointer;
+            @include media('small-width'){
+                width: 40px;
+            };
+            @include media('v-large-width'){
+              display: none;
+            };
+        }
+        .logo-2 { 
+            cursor: pointer; 
+            @include media('help'){
+                display: none;
+            };
+            @include media('v-large-width'){
+                visibility: visible;
+            }
+         }
+    }
+    .container {
+        &_contact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 1em 0;
+            @include media(help){
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                        "A A B B"
+                        ". C C .";
+            }
+
+            &_left {
+                text-align: center;
+                @include media(help){
+                    grid-area: A;
+                }
+                h4 {
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: color(pre);
+                    padding-bottom: 5px;
+                    @include media('v-large-width'){
+                        font-size: 20px;
+                    }
+                    @include media('flex'){
+                        font-size: 27px;
+                    }
+                }
+
+                p {
+                    font-size: 8px;
+                    font-weight: 900;
+                    padding-bottom: 5px;
+                    @include media('v-large-width'){
+                        font-size: 13px;
+                    }
+                    @include media('flex'){
+                        font-size: 19px;
+                        font-weight: 700;
+                    }
+                }
+                .number {
+                    color: color(tro);
+                }
+            }
+
+            &_morroco {
+                text-align: center;
+                @include media(help){
+                    grid-area: C;
+                }
+                li {
+                    
+                    padding-bottom: 3px;
+                    @include media('v-large-width'){
+                        padding-bottom: 1em;
+                    }
+
+                    .langue {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 25px;
+                        margin-top: 10px;
+                        @include media('v-large-width'){
+                            width: 35px;
+                            height: 35px;
+                        }
+                        @include media('flex'){
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                    .accueil {
+                        color: color(pre);
+                        font-size: 11px;
+                        font-weight: 700;
+                        @include media('v-large-width'){
+                            font-size: 17px;
+                        }
+                        @include media('flex'){
+                            font-size: 20px;
+                        }
+                    }
+                    .conseil {
+                        color: black;
+                        font-size: 11px;
+                        font-weight: 700;
+                        @include media('v-large-width'){
+                            font-size: 17px;
+                        }
+                        @include media('flex'){
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        
+            &_rigth {
+                text-align: center;
+                padding-left: 3em;
+                @include media(help){
+                    grid-area: B;
+                }
+                
+                p {
+                    color: color(deu);
+                    font-weight: 900;
+                    font-size: 11px;
+                    @include media('v-large-width'){
+                        font-size: 16px;
+                    }
+                    @include media('flex'){
+                        font-size: 20px;
+                    }
+                    span {
+                        color: black;
+                    }
+                }
+                h3 {
+                    @include media('v-large-width'){
+                        font-size: 27px;
+                    }
+                    @include media('flex'){
+                        font-size: 30px;
+                    }
+                    span {
+                        color: color(pre);
+                    }
+                }
+                h5 {
+                    color: gray;
+                    font-size: 11px;
+                    @include media('v-large-width'){
+                        font-size: 15px;
+                    }
+                    @include media('flex'){
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .bleu-space {
+        height: 25px;
+        background-color: color(pre);
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+}
