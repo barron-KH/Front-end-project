@@ -21,6 +21,11 @@
             @content;
         }
     }  
+    @else if $breakpoint == 'help-2' {
+        @media (min-width: $break-vl + 1) and (max-width: $break-flex){
+            @content;
+        }
+    }
     @else if $breakpoint == 'v-large-width' {
         @media (min-width: $break-vl + 1) and (max-width: $break-xl) {
             @content;

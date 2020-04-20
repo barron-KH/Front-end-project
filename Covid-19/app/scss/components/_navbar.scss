@@ -6,7 +6,6 @@
     @extend %navflex ;
 
     .logo { 
-        
         cursor: pointer; 
         margin-right: auto;
         @include media('small-width'){

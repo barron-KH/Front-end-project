@@ -1,0 +1,61 @@
+.informations {
+    background: rgba(4, 114, 187, 0.2);
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-around;
+    @include media(help){
+        flex-direction: column;
+    }
+    &_info {
+        text-align: center;
+        h1 {
+            color: color(pre);
+            font-weight: 700;
+            font-size: 40px;
+            margin-bottom: 10px;
+            @include media('help-2'){
+                font-size: 30px;
+            }
+            @include media(help){
+                font-size: 18px;
+            }
+        }
+        p {
+            font-weight: 700;
+            font-size: 25px;
+            color: rgb(7, 83, 184);
+            @include media('help-2'){
+                font-size: 18px;
+            }
+            @include media(help){
+                font-size: 13px;
+            }
+        }
+    }
+    &_btn-1 {
+        margin: auto 0;
+        text-align: center;
+        button {
+            border: 0;
+            @include button(
+                238px,
+                25px 0,
+                white,
+                color(pre),
+                5px,
+                17px,
+                700
+            );
+            @include media('help-2'){
+                font-size: 15px;
+                width: 200px;
+            }
+            @include media(help){
+                font-size: 13px;
+                width: 178px;
+                margin-top: 15px;
+                padding: 20px 0;
+            }
+        }
+    }
+}

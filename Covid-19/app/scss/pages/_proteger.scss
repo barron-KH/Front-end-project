@@ -1,0 +1,146 @@
+.head2 {
+    margin: 1em;
+    &_title {
+        text-align: center;
+        max-width: 466px; 
+        margin: 0 auto;
+        @include media(help){
+            max-width: 262px;
+        }
+        h2 {
+            color: color(pre);
+            font-weight: 700;
+            font-size: 30px;
+            @include media(help){
+                font-size: 18px;
+            }
+        }
+    }
+    p {
+        font-weight: 700;
+        color: color(pre);
+        @include media(help){
+            font-size: 13px;
+        }
+        
+    }
+    &_grid {
+        text-align: center;
+        display: grid;
+        grid-template-areas: 
+                "a b c"
+                "d e f";
+        @include media(help){
+            grid-template-areas: 
+                    "a b"
+                    "c d"
+                    "e f";
+        }
+
+        .place {
+            margin-top: 4em;
+        }
+        
+        .place1 {
+            @include media(help){
+                grid-area: c;
+            }
+            img {
+                margin-top: 36px;
+                @include media(help){
+                    width: 80px;
+                    margin: 0;
+                }
+            }
+            .para1 {
+                @include media('help'){
+                    margin-top: 22px;
+                }
+            }
+        }
+        .place2 {
+            padding-right: 4em;
+            @include media(help){
+                grid-area: a;
+                padding: 0;
+            }
+            img {
+                @include media(help){
+                    width: 60px;
+                }
+            }
+        }
+        .place3 {
+            @include media(help){
+                grid-area: b;
+            }
+            img {
+                margin-top: 10px;
+                @include media(help){
+                    width: 61px;
+                    margin: 0;
+                }
+            }
+            
+        }
+        .place4 {
+            @include media(help){
+                grid-area:f;
+            }
+            img {
+                @include media(help){
+                    width: 76px;
+                }
+            }
+            .paragra {
+                max-width: 263px;
+                margin: 0 auto;
+                @include media(help){
+                    max-width: 118px;
+                    margin-top: 8px;
+                }
+            }
+        }
+        .place5 {
+            padding-right: 4em;
+            @include media(help){
+                grid-area: e;
+                padding: 0;
+            }
+            img {
+                margin-top: 5px;
+                @include media(help){
+                    width: 79px;
+                    margin: 0;
+                    
+                }
+            }
+        }
+        .place6 {
+            @include media(help){
+                grid-area: d;
+            }
+            img {
+                @include media(help){
+                    width: 73px;
+                }
+            }
+        }
+    }
+    &_home {
+        text-align: center;
+        margin-top: 2em;
+        img {
+            @include media(help){
+                width: 66px;
+            }
+        }
+        .max {
+            max-width: 450px;
+            margin: 0 auto;
+            @include media(help){
+                max-width: 338px;
+            }
+        }
+    }
+}

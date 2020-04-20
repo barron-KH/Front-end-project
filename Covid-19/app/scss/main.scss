@@ -3,7 +3,7 @@
 @import 'base/base';
 @import 'components/navbar';
 @import 'layouts/info' ;
-@import 'pages/head';
+@import 'pages/head', 'pages/proteger', 'pages/informations', 'pages/transmition';
 @import 'layouts/symptomes', 'layouts/recommandations', 'layouts/test', 'layouts/footer';
 
 .wrapper { overflow: hidden; }

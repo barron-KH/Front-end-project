@@ -124,7 +124,7 @@ footer {
         
             &_rigth {
                 text-align: center;
-                padding-left: 3em;
+                padding-left: 2em;
                 @include media(help){
                     grid-area: B;
                 }
