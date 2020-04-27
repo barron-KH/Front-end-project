@@ -1,6 +1,6 @@
 # Projet Validation :  C2N3_C3N3
 
--  https://barron-kh.github.io/Front-end-project/Covid-19/src/conseil.html
+-  https://barron-kh.github.io/Front-end-project/Covid-19/src/accueil.html
 
 -  https://barron-kh.github.io/Projet-Montre-Analogue/.
 
