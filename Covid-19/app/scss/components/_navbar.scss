@@ -35,8 +35,7 @@
             padding: 0 2em;
         }
 
-        a { transition: 
-            all 500ms ease-out;
+        a { transition: all 500ms ease-out;
             color: color(pre);
             font-size: 14px;
             font-weight: 700;
@@ -45,6 +44,10 @@
             }
             @include media('v-large-width'){
                 font-size: 20px;
+            }
+            &:hover {
+                color: rgb(13, 67, 90);
+                transition: all 500ms ease-out;
             }
         }
         .conseil {

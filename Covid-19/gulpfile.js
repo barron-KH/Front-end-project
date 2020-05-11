@@ -5,18 +5,18 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const imagemin = require('gulp-imagemin');
+const terser = require("gulp-terser");
 var replace = require('gulp-replace');
 
 
 // File paths
 const files = { 
     scssPath: 'app/scss/**/*.scss',
-    jsPath: 'app/js/**/*.js',
+    jsPath: 'app/js/*.js',
     imgPath: 'app/img/*'
 }
 
@@ -27,14 +27,15 @@ function scssTask(){
         .pipe(sass()) // compile SCSS to CSS
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('src/css')); // put final CSS in dist folder
+        .pipe(dest('src/css')// put final CSS in dist folder
+    );
 }
 
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask(){
     return src(files.jsPath)
-        .pipe(concat('all.js'))
-        .pipe(uglify())
+        .pipe(concat("all.js"))
+        .pipe(terser())
         .pipe(dest('src/js')
     );
 }
@@ -42,8 +43,9 @@ function jsTask(){
 // Img task: 
 function imgTask(){
     return src(files.imgPath)
-    .pipe(imagemin())
-    .pipe(dest('src/minifield/images'))
+        .pipe(imagemin())
+        .pipe(dest('src/minifield/images')
+    );
 }
 
 // Cachebust
@@ -51,7 +53,8 @@ function cacheBustTask(){
     var cbString = new Date().getTime();
     return src(['src/*.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('src'));
+        .pipe(dest('src')
+    );
 }
 
 // Watch task: watch SCSS and JS files and IMG files for changes

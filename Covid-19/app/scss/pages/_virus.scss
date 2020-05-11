@@ -1,0 +1,207 @@
+
+
+.bar {
+	width: 60%;
+	height: 0.4em;
+	margin: 0 auto;
+	border-radius: 1em;
+	background-color: darken($primary, 8%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4em;
+	margin-top: 2.5rem;
+	&_info { 
+		border-radius: 50%;
+		background-color: $primary;
+		width: 0.8em;
+		height: 0.8em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		span {
+			margin-top: 4em;
+			font-size: 0.8rem;
+		}
+		.circle {
+			background-color: $primary;
+			width: 2em;
+			height: 2em;
+			z-index: 0;
+			position: absolute;
+			display: none;
+			border-radius: 50%;
+			.mini-circle {
+				border-radius: 50%;
+				background-color: $secondary;
+				width: 0.8em;
+				height: 0.8em;
+				margin: 0.6em;
+			}
+		}
+	}
+}
+
+.preambule {
+	background-color: $secondary2;
+	text-align: center;
+	padding: 0.5em 1em;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 1em;
+	h1 {
+		color: $primary;
+		font-size: 1.3rem;
+	}
+	hr {
+		width: 60%;
+		border-color: color(deu);
+		margin: 0 auto;
+	}
+	&_top {
+		padding: 0 2em 1em;
+		font-weight: 700;
+		line-height: 1.6em;
+		font-size: 0.8em;
+	}
+	&_bottom {
+		font-weight: 700;
+		line-height: 1.6em;
+		font-size: 0.8em;
+		padding: 1em 2em 2em;
+	}
+}
+
+.demarrer {
+	text-align: center;
+	margin-top: 1em;
+	&_button {
+		@include btn;
+		width: 50%;
+		max-width: 500px;
+		cursor: pointer;
+	}
+}
+
+.progress {
+	display: flex;
+	justify-content: center;
+	display: none;
+	&_bar {
+		width: 80%;
+		border-radius: 1em;
+		border: 1px solid $primary;
+		margin: 0 0.5em;
+		background-color: lighten($secondary2, 20%);
+		&_fill {
+			background-color: $primary;
+			width: 0%;
+			height: 100%;
+			border-radius: 1em;
+		}
+	}
+}
+
+.ques {
+	padding: 1.5em 2em;
+	display: none;
+	&_text {
+		color: $neutral2;
+		margin-bottom: 3em;
+	}
+	&_form {
+		text-align: right;
+
+		input {
+			margin: 0.8em 0;
+			background-color: white;
+		}
+	}
+}
+
+.anti {
+	text-align: center;
+	background-color: $secondary;
+	padding: 0.5em 2em;
+	margin-top: 1em;
+	display: none;
+	&__text {
+		line-height: 1.8em;
+		font-size: 1rem;
+		padding: 0 2em;
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: space-around;
+	&_previous {
+		display: none;
+	}
+	
+	button {
+		@include btn;
+		width: 40%;
+		margin-top: 3em;
+		font-size: 0.9em;
+		cursor: pointer;
+	}
+	
+}
+
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-radio{
+	display: flex;
+	justify-content: space-evenly;
+	.mini{
+		display: flex;
+		width: 400px;
+		justify-content: flex-end;
+		align-items: center;
+		input{
+			margin: 1em 20%;
+		}
+	}
+	
+}
+
+
+.resultat{
+	text-align: center;
+	width: 40%;
+	margin: 0 auto;
+	display: none;
+	h4{
+		color: $neutral3;
+	}
+	&_block{
+		background-color: $primary;
+		padding: 1em;
+		border-radius: 1em;
+		h2{
+			color: $neutral4;
+		}
+		p{
+			color: $secondary;
+			line-height: 1.5em;
+		}
+	}
+	&_reprendre{
+		@include btn;
+		width: 50%;
+		max-width: 500px;
+		cursor: pointer;
+	}
+}

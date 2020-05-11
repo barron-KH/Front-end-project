@@ -17,3 +17,25 @@ $break-vl: 768px;
 $break-flex: 1210px;
 $break-xl: 2000px;
 
+$primary: #1078ad;
+$secondary: #f4cf1b;
+$secondary2: #96c5dc;
+$neutral1: black;
+$neutral2: #7f7f7f;
+$neutral3: #369d53;
+$neutral4: white;
+
+@mixin btn {
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	border: 1px solid $primary;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	font-size: 1.2em;
+	width: 60%;
+	max-width: 600px;
+	background: url(../minifield/images/back.g.png) center/cover;
+	margin: 1em auto;
+}
+
