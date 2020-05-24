@@ -57,7 +57,7 @@
               flex-wrap: $wrap;
                justify-content: $content;
                 align-items: $align;
-                       }
+}
 
 /**** button ******/
 
@@ -76,4 +76,18 @@
                             border-radius: $border;
                              font-size: $f-size;
                               font-weight: $f-weight;
-                            }
+}                
+
+@mixin btn {
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	border: 1px solid color(pre);
+	padding: 0.5em;
+	border-radius: 0.3em;
+	font-size: 1.2em;
+	width: 60%;
+	max-width: 600px;
+	background: url(../minifield/images/back.g.png) center/cover;
+	margin: 1em auto;
+}

@@ -5,7 +5,7 @@
 	height: 0.4em;
 	margin: 0 auto;
 	border-radius: 1em;
-	background-color: darken($primary, 8%);
+	background-color: darken(color(pre), 8%);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -13,7 +13,7 @@
 	margin-top: 2.5rem;
 	&_info { 
 		border-radius: 50%;
-		background-color: $primary;
+		background-color: color(pre);
 		width: 0.8em;
 		height: 0.8em;
 		display: flex;
@@ -25,7 +25,7 @@
 			font-size: 0.8rem;
 		}
 		.circle {
-			background-color: $primary;
+			background-color: color(pre);
 			width: 2em;
 			height: 2em;
 			z-index: 0;
@@ -34,7 +34,7 @@
 			border-radius: 50%;
 			.mini-circle {
 				border-radius: 50%;
-				background-color: $secondary;
+				background-color: color(deu);
 				width: 0.8em;
 				height: 0.8em;
 				margin: 0.6em;
@@ -44,14 +44,14 @@
 }
 
 .preambule {
-	background-color: $secondary2;
+	background-color: color(qua);
 	text-align: center;
 	padding: 0.5em 1em;
 	width: 70%;
 	margin: 0 auto;
 	border-radius: 1em;
 	h1 {
-		color: $primary;
+		color: color(pre);
 		font-size: 1.3rem;
 	}
 	hr {
@@ -91,11 +91,11 @@
 	&_bar {
 		width: 80%;
 		border-radius: 1em;
-		border: 1px solid $primary;
+		border: 1px solid color(pre);
 		margin: 0 0.5em;
-		background-color: lighten($secondary2, 20%);
+		background-color: lighten(color(qua), 20%);
 		&_fill {
-			background-color: $primary;
+			background-color: color(pre);
 			width: 0%;
 			height: 100%;
 			border-radius: 1em;
@@ -107,7 +107,7 @@
 	padding: 1.5em 2em;
 	display: none;
 	&_text {
-		color: $neutral2;
+		color: color(cin);
 		margin-bottom: 3em;
 	}
 	&_form {
@@ -122,7 +122,7 @@
 
 .anti {
 	text-align: center;
-	background-color: $secondary;
+	background-color: color(deu);
 	padding: 0.5em 2em;
 	margin-top: 1em;
 	display: none;
@@ -184,17 +184,17 @@
 	margin: 0 auto;
 	display: none;
 	h4{
-		color: $neutral3;
+		color: color(tro);
 	}
 	&_block{
-		background-color: $primary;
+		background-color: color(pre);
 		padding: 1em;
 		border-radius: 1em;
 		h2{
-			color: $neutral4;
+			color: white;
 		}
 		p{
-			color: $secondary;
+			color: color(deu);
 			line-height: 1.5em;
 		}
 	}
