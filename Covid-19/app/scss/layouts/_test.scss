@@ -34,7 +34,7 @@
         button {
             border: 0;
             background: url(../minifield/images/back.g.png) center/cover;
-
+            cursor: pointer;
             @include button(
                 40%,
                 4px 0,

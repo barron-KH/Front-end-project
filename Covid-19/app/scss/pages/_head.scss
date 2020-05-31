@@ -97,6 +97,7 @@
             margin-top: 0.7em;
             border: 0;
             background: url(../minifield/images/back.g.png) center/cover;
+            cursor: pointer;
             @include button(
                 80%,
                 10px 0,
